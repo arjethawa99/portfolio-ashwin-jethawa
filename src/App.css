@@ -1,0 +1,616 @@
+/* Header Styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #D1E0D7;
+    transition: all 0.3s ease-in-out;
+    /* Add a smooth transition for lazy animation */
+}
+
+.LogoName {
+    font-size: 1.5rem;
+    color: #607EBC;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.listMenu ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+
+
+.listMenu li {
+    font-size: 1rem;
+    color: #607EBC;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.listMenu li:hover {
+    color: #D1E0D7;
+    background-color: #607EBC;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.downloadBtn a {
+    color: #607EBC;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: #D1E0D7;
+    border-radius: 5px;
+    border: 2px solid #607EBC;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.downloadBtn a:hover {
+    background-color: #607EBC;
+    color: #D1E0D7;
+}
+
+.hamburger {
+    display: none;
+    /* Hide by default for desktop */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #607EBC;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .Header {
+        position: relative;
+        /* Ensure it has positioning */
+        z-index: 1000;
+        /* Higher value than other elements */
+    }
+
+    .Header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .listMenu {
+        display: none;
+        position: absolute;
+        /* top: 60px; */
+        /* Adjusted to appear below the header */
+        left: 0;
+        width: 80%;
+        background-color: #D1E0D7;
+        padding: 10px 0;
+        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+        z-index: 2000;
+        /* Ensures menu is on top */
+    }
+
+    .listMenu {
+        /* position: absolute; */
+        display: none;
+        margin-top: 2rem;
+        margin-right: 6rem;
+    }
+
+    .showMenu {
+        display: block;
+    }
+
+    .listMenu ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+        /* display: none; */
+        /* Initially hide menu on small screens */
+    }
+
+
+
+    .listMenu .showMenu ul {
+        display: block;
+        /* Show menu when hamburger is clicked */
+    }
+
+    .hamburger {
+        display: flex;
+        /* Show hamburger icon */
+    }
+
+    .listMenu li {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .downloadBtn {
+        display: none;
+    }
+}
+
+/* Lazy Animation for Menu Items */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.listMenu li {
+    animation: fadeIn 0.5s ease-out;
+    animation-delay: 0.1s;
+}
+
+.listMenu li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.listMenu li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.listMenu li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+
+/* Banner */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url('./Image/ashfour.JPG') no-repeat center center;
+    background-size: cover;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+}
+
+.Greeting-Container {
+    position: absolute;
+    bottom: 20px;
+    right: 10rem;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    background: rgba(96, 126, 188, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.Greeting-Container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.Greeting-Container h5 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.Greeting-Container button {
+    background: #D1E0D7;
+    color: #607EBC;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.Greeting-Container button:hover {
+    background: #607EBC;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Greeting-Container {
+        right: 5rem;
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        background-position: center center;
+    }
+
+    .Greeting-Container {
+        width: 90%;
+        max-width: 350px;
+        /* bottom: 10px; */
+        padding: 0;
+        /* right: 5%; */
+        /* left: 5%; */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .Greeting-Container h1 {
+        font-size: 1.5rem;
+    }
+
+    .Greeting-Container h5 {
+        font-size: 1rem;
+    }
+
+    .Greeting-Container button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        background-position: center top;
+    }
+
+    .Greeting-Container {
+        /* bottom: 5px; */
+        right: 1rem;
+        padding: 0;
+        width: 95%;
+        text-align: center;
+    }
+
+    .Greeting-Container h1 {
+        font-size: 1.5rem;
+    }
+
+    .Greeting-Container h5 {
+        font-size: 0.9rem;
+    }
+
+    .Greeting-Container button {
+        font-size: 0.8rem;
+        padding: 7px 14px;
+    }
+}
+
+/* About */
+/* Parent container to center content */
+.container-discription-main {
+    display: flex;
+    flex-direction: column;
+    /* Ensures h1 and container stack */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+    background-color: #D1E0D7;
+    /* Light background */
+    text-align: center;
+}
+
+/* Title styling */
+.container-discription-main h1 {
+    font-size: 2.5rem;
+    color: #607EBC;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Transparent description container */
+.container-discription {
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    background: rgba(96, 126, 188, 0.8);
+    /* Semi-transparent */
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    animation: slideUp 1s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-discription {
+        width: 80%;
+        /* Adjust width for mobile */
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .container-discription-main h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Project's */
+/* Main container for projects */
+.main-container-project {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(96, 126, 188, 0.8);
+}
+
+/* Title styling */
+.main-container-project h1 {
+    font-size: 2.5rem;
+    color: #D1E0D7;
+    /* #607EBC; */
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Grid layout for project cards */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual card styling */
+.cards-body {
+    background: #D1E0D7;
+    /* rgba(96, 126, 188, 0.8); */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for cards */
+.cards-body:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Title inside card */
+.title-card {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #607EBC;
+}
+
+/* Redirect event inside card */
+.redirect-cardevent {
+    font-size: 1rem;
+    color: #D1E0D7;
+    background: #607EBC;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Hover effect for redirect button */
+.redirect-cardevent:hover {
+    background: #D1E0D7;
+    color: #607EBC;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container-project h1 {
+        font-size: 2rem;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Smaller grid for mobile */
+    }
+
+    .cards-body {
+        padding: 15px;
+    }
+
+    .title-card {
+        font-size: 1rem;
+    }
+
+    .redirect-cardevent {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #D1E0D7;
+}
+
+a:hover{
+    color: #607EBC;
+}
+
+/* Contact */
+/* Main Container */
+.main-container-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #D1E0D7; /* Light green */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Animation */
+.headline h1 {
+    font-size: 2rem;
+    color: #607EBC; /* Blue */
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Icon Default Styles */
+.social-icon {
+    color: #607EBC; /* Default color */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    display: inline-block;
+    animation: bounce 0.6s ease-in-out 1;
+}
+
+/* Hover Effect */
+.social-icon:hover {
+    transform: scale(1.2) rotate(8deg);
+    opacity: 0.8;
+    color: black; /* Light green */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .headline h1 {
+        font-size: 1.5rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headline h1 {
+        font-size: 1.2rem;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .social-icon svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+ 
+.leetcode-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.leetcode-icon:hover {
+    transform: scale(1.2) rotate(8deg);
+    opacity: 0.8;
+}

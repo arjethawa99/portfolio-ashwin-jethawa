@@ -5,7 +5,8 @@ const About = () => {
         <div className='container-discription-main'>
             <h1>About</h1>
             <div className="container-discription">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam veritatis dicta molestias dolor dolorem eaque vel quam rerum aliquid. Excepturi nesciunt cupiditate ut vero eveniet placeat, earum aliquid ipsam saepe rerum eligendi illo iure praesentium magnam ullam minus, velit dolore incidunt eaque explicabo? Cupiditate a, quaerat quod eius mollitia, facere assumenda quas non perferendis voluptates error sequi! Tempora, omnis. Accusamus quidem sed animi? Tempore, ducimus? Earum similique perspiciatis fugit quia non, consequuntur sint id eius possimus facere accusantium, cum corrupti mollitia ipsa nostrum voluptatem exercitationem!    
+                <p>I am Ashwin Jethawa, a Frontend Developer with 3.5+ years of experience, currently working at Teknopoint/DEPT. I specialize in crafting dynamic, responsive, and user-friendly web applications using technologies like HTML, CSS, JavaScript, and jQuery. My expertise extends to modern frameworks like React, ensuring seamless UI/UX experiences. Additionally, I have hands-on experience with Git for version control and API integration to enhance web functionality.</p>
+                <p>I also work extensively with Adobe Experience Manager (AEM), leveraging OSGi components and Edge Delivery Service (EDS) to optimize content delivery and performance. My role involves collaborating with cross-functional teams to develop scalable solutions that align with business goals. Passionate about web technologies, I constantly strive to stay updated with industry trends and best practices. and to create intuitive and high-performing applications that enhance user engagement while ensuring efficient and maintainable codebases.</p>
             </div>
         </div>
     )

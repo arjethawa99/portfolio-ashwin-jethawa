@@ -12,10 +12,10 @@ const SocialMediaIcons = () => {
             {/* Social Icons */}
             <div className="social-icons">
                 {[
-                    { icon: FaFacebook, link: "https://facebook.com" },
-                    { icon: FaInstagram, link: "https://instagram.com" },
-                    { icon: FaLinkedin, link: "https://linkedin.com" },
-                    { icon: FaGithub , link: "https://github.com/" },
+                    { icon: FaFacebook, link: "https://www.facebook.com/ashwin.jethawa.9?mibextid=ZbWKwL" },
+                    { icon: FaInstagram, link: "https://www.instagram.com/er___ashwin45?igsh=cmE2OWNramI0dnBr" },
+                    { icon: FaLinkedin, link: "https://www.linkedin.com/in/ashwin-jethawa-195590149" },
+                    { icon: FaGithub , link: "https://github.com/arjethawa99" },
                 ].map(({ icon: Icon, link }, index) => (
                     <a
                         key={index}
@@ -29,7 +29,7 @@ const SocialMediaIcons = () => {
                     </a>
                 ))}
                 <a
-                    href="https://leetcode.com/"
+                    href="https://leetcode.com/u/Ashwin2227/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-icon"

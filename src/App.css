@@ -390,13 +390,14 @@ body {
     .container-discription {
         width: 80%;
         /* Adjust width for mobile */
-        font-size: 1rem;
+        font-size: 0.5rem;
         padding: 15px;
     }
 
     .container-discription-main h1 {
         font-size: 2rem;
     }
+    
 }
 
 /* Project's */

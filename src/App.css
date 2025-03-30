@@ -262,17 +262,20 @@ body {
 @media (max-width: 768px) {
     .container {
         background-position: center center;
+        background: url(./Image/mobileView.png) no-repeat center;
+        background-size: cover;
     }
 
     .Greeting-Container {
         width: 90%;
         max-width: 350px;
-        /* bottom: 10px; */
+        bottom: -3rem;
         padding: 0;
         /* right: 5%; */
         /* left: 5%; */
         margin: 0 auto;
         text-align: center;
+        z-index: 9999;
     }
 
     .Greeting-Container h1 {
@@ -296,10 +299,12 @@ body {
 
     .Greeting-Container {
         /* bottom: 5px; */
-        right: 1rem;
+        bottom: -3rem;
+        right: 0.5rem;
         padding: 0;
         width: 95%;
         text-align: center;
+        z-index: 9999;
     }
 
     .Greeting-Container h1 {

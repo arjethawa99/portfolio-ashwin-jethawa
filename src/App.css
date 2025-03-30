@@ -507,12 +507,12 @@ body {
     }
 }
 
-a{
+a {
     text-decoration: none;
     color: #D1E0D7;
 }
 
-a:hover{
+a:hover {
     color: #607EBC;
 }
 
@@ -524,7 +524,8 @@ a:hover{
     align-items: center;
     text-align: center;
     padding: 50px 20px;
-    background-color: #D1E0D7; /* Light green */
+    background-color: #D1E0D7;
+    /* Light green */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -532,7 +533,8 @@ a:hover{
 /* Heading Animation */
 .headline h1 {
     font-size: 2rem;
-    color: #607EBC; /* Blue */
+    color: #607EBC;
+    /* Blue */
     font-weight: bold;
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out forwards;
@@ -550,7 +552,8 @@ a:hover{
 
 /* Icon Default Styles */
 .social-icon {
-    color: #607EBC; /* Default color */
+    color: #607EBC;
+    /* Default color */
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     display: inline-block;
     animation: bounce 0.6s ease-in-out 1;
@@ -560,20 +563,36 @@ a:hover{
 .social-icon:hover {
     transform: scale(1.2) rotate(8deg);
     opacity: 0.8;
-    color: black; /* Light green */
+    color: black;
+    /* Light green */
 }
 
 /* Fade-in Animation */
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-10px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Bounce Animation */
 @keyframes bounce {
-    0% { transform: translateY(0); }
-    30% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
@@ -607,7 +626,7 @@ a:hover{
         height: 25px;
     }
 }
- 
+
 .leetcode-icon {
     width: 40px;
     height: 40px;
@@ -618,4 +637,61 @@ a:hover{
 .leetcode-icon:hover {
     transform: scale(1.2) rotate(8deg);
     opacity: 0.8;
+}
+
+/* Mobile desktop */
+@media (max-width: 768px) {
+    .listMenu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #D1E0D7;
+        padding: 10px 0;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .listMenu.showMenu {
+        display: flex;
+    }
+}
+
+.container {
+    background: url('./Image/ashfour.JPG') no-repeat center center;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .container {
+        background: url('./Image/mobileView.png') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .Greeting-Container {
+        position: static;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 350px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
 }

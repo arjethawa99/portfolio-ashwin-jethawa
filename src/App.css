@@ -269,7 +269,7 @@ body {
     .Greeting-Container {
         width: 90%;
         max-width: 350px;
-        bottom: -3rem;
+        bottom: 3rem;
         padding: 0;
         /* right: 5%; */
         /* left: 5%; */
@@ -299,7 +299,7 @@ body {
 
     .Greeting-Container {
         /* bottom: 5px; */
-        bottom: -3rem;
+        bottom: 3rem;
         right: 1.8rem;
         padding: 0;
         width: 95%;

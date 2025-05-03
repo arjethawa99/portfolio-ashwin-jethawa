@@ -1,9 +1,19 @@
 import React, { useContext } from 'react'
 import { useState } from 'react'
 import { AuthContext } from '../Context/Authprovider';
+import cvpdf from '../../public/AshwinJethawaResume (2)-2 (2).pdf'
 
 
 const Header = () => {
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = { cvpdf }; // path from public folder
+        link.download = "Ashwin-Jethawa-CV.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     const scrollTo = (ref) => {
         const el = document.getElementById(ref)
         if (el) {
@@ -30,7 +40,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className='downloadBtn'>
-                <a href='#'>Download CV</a>
+                <a href='#' onClick={() => { handleDownload() }}>Download CV</a>
             </div>
             <div className="hamburger" onClick={toggleMenu}>
                 <span className="bar"></span>

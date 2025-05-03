@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
+import { AuthContext } from '../Context/Authprovider';
 
 
 const Header = () => {
+    const scrollTo = (ref) => {
+        const el = document.getElementById(ref)
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+    const AuthData = useContext(AuthContext);
     const [isMenuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -15,10 +23,10 @@ const Header = () => {
             </div>
             <div className={`listMenu ${isMenuOpen ? 'showMenu' : ''}`}>
                 <ul>
-                    <li>Home</li>
-                    <li>Know Me</li>
-                    <li>Project</li>
-                    <li>Contact</li>
+                    <li onClick={() => { scrollTo("Home") }}>Home</li>
+                    <li onClick={() => { scrollTo("about") }}>Know Me</li>
+                    <li onClick={() => { scrollTo("project") }}>Project</li>
+                    <li onClick={() => { scrollTo("contact") }}>Contact</li>
                 </ul>
             </div>
             <div className='downloadBtn'>
@@ -29,7 +37,7 @@ const Header = () => {
                 <span className="bar"></span>
                 <span className="bar"></span>
             </div>
-        </div>
+        </div >
     )
 }
 

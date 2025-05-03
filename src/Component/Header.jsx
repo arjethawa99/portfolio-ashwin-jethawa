@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useState } from 'react'
 import { AuthContext } from '../Context/Authprovider';
-import cvpdf from '../assets/AshwinJethawaResume.pdf'
+import cvpdf from '../assets/AshwinJethawaResume (2)-2 (2).pdf'
 
 
 const Header = () => {

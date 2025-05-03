@@ -1,5 +1,5 @@
 import React from 'react'
-import cvpdf from '../../public/AshwinJethawaResume (2)-2 (2).pdf'
+import cvpdf from '../assets/AshwinJethawaResume (2)-2 (2).pdf'
 const Banner = () => {
     const handleDownload = () => {
         const link = document.createElement("a");

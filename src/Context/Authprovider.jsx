@@ -34,6 +34,18 @@ const DataProjectObj = [
         "title": "Travel",
         "skills": "HTML,CSS,JS",
         "linkURL": "https://github.com/arjethawa99/travel"
+    },
+    {
+        "title": "Movie Recommendation System",
+        "skills": "Python, Flask, HTML, CSS, JavaScript, TypeScript",
+        "description": "A recommendation web application built with Flask and a responsive frontend.",
+        "linkURL": ""
+    },
+    {
+        "title": "Banking Application",
+        "skills": "Java, NetBeans, XAMPP, MySQL",
+        "description": "A Java banking application connected to a MySQL database for core banking workflows.",
+        "linkURL": ""
     }
 ]
 

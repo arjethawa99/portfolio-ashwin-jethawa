@@ -7,7 +7,7 @@ import cvpdf from '../assets/AshwinJethawaResume (2)-2 (2).pdf'
 const Header = () => {
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = { cvpdf }; // path from public folder
+        link.href = cvpdf;
         link.download = "Ashwin-Jethawa-CV.pdf";
         document.body.appendChild(link);
         link.click();
@@ -35,6 +35,7 @@ const Header = () => {
                 <ul>
                     <li onClick={() => { scrollTo("Home") }}>Home</li>
                     <li onClick={() => { scrollTo("about") }}>Know Me</li>
+                    <li onClick={() => { scrollTo("experience") }}>Experience</li>
                     <li onClick={() => { scrollTo("project") }}>Project</li>
                     <li onClick={() => { scrollTo("contact") }}>Contact</li>
                 </ul>
